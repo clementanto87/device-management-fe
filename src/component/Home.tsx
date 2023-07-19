@@ -56,14 +56,15 @@ const Home = () => {
       </article>
 
       <section className="section-content">
-        {ShownPage === PageEnum.list && deviceList.length > 0 && (
-          <>
-            <input
+      <input
               type="button"
               value="Add NewDevice"
               onClick={onAddDeviceClickHandler}
               className="add-newdevice-btn"
             ></input>
+        {ShownPage === PageEnum.list && deviceList.length > 0 && (
+          <>
+
             <DeviceList list={deviceList} onEdit={editDeviceData} />
           </>
         )}
